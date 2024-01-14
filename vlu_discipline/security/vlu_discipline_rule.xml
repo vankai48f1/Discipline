@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="vlu_discipline_discipline_line_student_rule" model="ir.rule">
+            <field name="name">Discipline Lines Student</field>
+            <field name="model_id" ref="model_discipline_line"/>
+            <field name="groups" eval="[(6,0 ,[ref('vlu_discipline.group_vlu_student')])]"/>
+            <field name="domain_force">[('student_id','=',user.id),('state','not in',['draft','cancel'])]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="perm_create" eval="False"/>
+        </record>
+
+        <record id="vlu_discipline_discipline_line_teacher_rule" model="ir.rule">
+            <field name="name">Discipline Lines Teacher</field>
+            <field name="model_id" ref="model_discipline_line"/>
+            <field name="groups" eval="[(6,0 ,[ref('vlu_discipline.group_vlu_teacher')])]"/>
+            <field name="domain_force">[('teacher_id','=',user.id),('state','not in',['draft','cancel'])]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="perm_create" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

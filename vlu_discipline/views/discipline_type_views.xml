@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_discipline_type_view_tree" model="ir.ui.view">
+            <field name="name">vlu.discipline.discipline.type.view.tree</field>
+            <field name="model">discipline.type</field>
+            <field name="arch" type="xml">
+                <tree string="Discipline Type" editable="bottom">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="need_commitment"/>
+                    <field name="active" required="1" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

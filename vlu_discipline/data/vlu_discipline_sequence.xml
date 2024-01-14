@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_discipline_sequence" model="ir.sequence">
+            <field name="name">Discipline Sequence</field>
+            <field name="code">discipline</field>
+            <field name="prefix">D%(y)s</field>
+            <field name="padding">5</field>
+            <field name="number_next_actual">1</field>
+        </record>
+    </data>
+</odoo>

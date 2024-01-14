@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_majors_view_tree" model="ir.ui.view">
+            <field name="name">vlu.discipline.majors.view.tree</field>
+            <field name="model">majors</field>
+            <field name="arch" type="xml">
+                <tree string="Majors">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="classes_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vlu_majors_view_form" model="ir.ui.view">
+            <field name="name">vlu_majors_view_form</field>
+            <field name="model">majors</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                            <page string="Classes">
+                                <field name="classes_ids">
+                                    <tree>
+                                        <field name="code"/>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

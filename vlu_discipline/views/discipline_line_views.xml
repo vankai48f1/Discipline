@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_discipline_line_view_tree" model="ir.ui.view">
+            <field name="name">vlu.discipline.discipline.line.view.tree</field>
+            <field name="model">discipline.line</field>
+            <field name="arch" type="xml">
+                <tree string="Discipline Lines">
+                    <field name="student_code"/>
+                    <field name="student_id" widget="many2one_avatar_user" options="{'no_open':True}"/>
+                    <field name="semester_id" options="{'no_open':True}"/>
+                    <field name="classes_id" options="{'no_open':True}"/>
+                    <field name="majors_id" options="{'no_open':True}"/>
+                    <field name="discipline_type_id" options="{'no_open':True}"/>
+                    <field name="teacher_id" widget="many2one_avatar_user" options="{'no_open':True}"/>
+                    <field name="discipline_id" widget="many2one" options="{'no_open':True}"/>
+                    <field name="state" widget="badge" decoration-success="state == 'done'"
+                           decoration-info="state == 'to_commit'" decoration-muted="state in ['draft','cancel']"
+                           decoration-primary="state == 'to_validate'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vlu_discipline_discipline_line_view_form" model="ir.ui.view">
+            <field name="name">vlu.discipline.discipline.line.view.form</field>
+            <field name="model">discipline.line</field>
+            <field name="arch" type="xml">
+                <form string="Discipline Lines">
+                    <header>
+                        <Button type="object" name="act_confirm" string="CONFIRM"
+                                groups="base.group_system,vlu_discipline.group_vlu_student"
+                                attrs="{'invisible':[('state','!=','to_commit')]}"
+                                class="oe_stat_button btn-primary" icon="fa-duotone fa-strikethrough"/>
+                        <Button type="object" name="act_validate" string="VALIDATE"
+                                groups="base.group_system,vlu_discipline.group_vlu_teacher"
+                                attrs="{'invisible':[('state','!=','to_validate')]}"
+                                class="oe_stat_button btn-primary" icon="fa-duotone fa-strikethrough"/>
+                        <Button type="object" name="act_approve" string="APPROVE"
+                                confirm="Be careful because the business life cycle. You still want to approve?"
+                                attrs="{'invisible':[('is_excuse','=',True)]}"
+                                class="oe_stat_button btn-info" icon="fa-sharp fa-solid fa-thumbs-up"
+                                groups="base.group_system,vlu_discipline.group_vlu_teacher"/>
+                        <Button type="object" name="act_disapprove" string="DISAPPROVE"
+                                confirm="Be careful because the business life cycle. You still want to disapprove?"
+                                attrs="{'invisible':['|',('is_excuse','=',False),('state','!=','done')]}"
+                                class="oe_stat_button btn-danger" icon="fa-lock"
+                                groups="base.group_system,vlu_discipline.group_vlu_teacher"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                         <div class="oe_button_box" name="button_box">
+                            <button name="act_print_report" type="object" string="Print Report"
+                                    class="oe_stat_button" icon="fa-solid fa-print"
+                                    attrs="{'invisible':[('state','!=','done')]}"
+                                    groups="base.group_user"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="parent_state" invisible="1"/>
+                                <field name="student_code" readonly="1"/>
+                                <field name="student_id" widget="many2one_avatar_user" options="{'no_open':True}"
+                                       attrs="{'readonly':[('state','in',['to_commit','to_validate','done'])]}"/>
+                                <field name="excuse" placeholder="Enter the reason why you are in this situation."
+                                       attrs="{'readonly': ['|',('is_excuse','=',False),'|',('is_read_excuse','=',True),('state','!=','to_commit')]}"/>
+                                <field name="is_excuse" widget="boolean_toggle" attrs="{'readonly':True}"/>
+                                <field name="is_read_excuse" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="semester_id" readonly="1" options="{'no_open':True}"/>
+                                <field name="discipline_type_id" options="{'no_open':True}" readonly="1"/>
+                                <field name="discipline_id" widget="many2one" options="{'no_open':True}"
+                                       attrs="{'readonly':[('state','in',['to_commit','to_validate','done'])]}"/>
+                                <field name="report_file" readonly="1" filename="file_name"/>
+                                <field name="file_name" invisible="1" widget="binary"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="study-plan" string="Study Plan">
+                                <field name="study_plan_ids" attrs="{'readonly':[('state','=','done')]}">
+                                    <tree string="Study Plan">
+                                        <field name="discipline_line_id"/>
+                                        <field name="module"/>
+                                        <field name="number_of_credit"/>
+                                        <field name="semester"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="info-related" string="Information Related">
+                                <group>
+                                    <group>
+                                        <field name="teacher_id" widget="many2one_avatar_user" readonly="1"
+                                               options="{'no_open':True}"/>
+                                        <field name="comment"
+                                               attrs="{'readonly':['|',('is_read_comment','=',True),('state','!=','to_validate')]}"/>
+                                        <field name="is_read_comment" invisible="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="classes_id" readonly="1" options="{'no_open':True}"/>
+                                        <field name="majors_id" readonly="1" options="{'no_open':True}"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="vlu_discipline_discipline_line_view_search" model="ir.ui.view">
+            <field name="name">vlu.discipline.discipline.line.view.search</field>
+            <field name="model">discipline.line</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="student_id" string="Student Name"/>
+                    <separator/>
+                    <group expand="1" string="Group by">
+                        <filter string="Semester" name="semester_id" context="{'group_by':'semester_id'}"/>
+                        <filter string="Discipline" name="discipline_id" context="{'group_by':'discipline_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

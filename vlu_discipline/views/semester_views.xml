@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_disipline_semester_view_tree" model="ir.ui.view">
+            <field name="name">vlu.disipline.semester.view.tree</field>
+            <field name="model">semester</field>
+            <field name="arch" type="xml">
+                <tree string="Semester" editable="bottom">
+                    <field name="name"/>
+                    <field name="year"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

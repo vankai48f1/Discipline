@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_majors_action" model="ir.actions.act_window">
+            <field name="name">Majors</field>
+            <field name="res_model">majors</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="vlu_discipline_classes_action" model="ir.actions.act_window">
+            <field name="name">Classes</field>
+            <field name="res_model">classes</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        <record id="vlu_discipline_discipline_type_action" model="ir.actions.act_window">
+            <field name="name">Discipline Type</field>
+            <field name="res_model">discipline.type</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        <record id="vlu_discipline_semester_action" model="ir.actions.act_window">
+            <field name="name">Semester</field>
+            <field name="res_model">semester</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        <record id="vlu_discipline_discipline_action" model="ir.actions.act_window">
+            <field name="name">Discipline</field>
+            <field name="res_model">discipline</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_year':1}</field>
+        </record>
+        <record id="vlu_discipline_discipline_line_action_staff" model="ir.actions.act_window">
+            <field name="name">Discipline Lines</field>
+            <field name="res_model">discipline.line</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_semester_id':1}</field>
+        </record>
+        <record id="vlu_discipline_discipline_line_action_teacher" model="ir.actions.act_window">
+            <field name="name">Discipline Lines Classes</field>
+            <field name="res_model">discipline.line</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_semester_id':1}</field>
+        </record>
+        <record id="vlu_discipline_discipline_line_action_student" model="ir.actions.act_window">
+            <field name="name">My Discipline Lines</field>
+            <field name="res_model">discipline.line</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_semester_id':1}</field>
+        </record>
+
+        <record id="vlu_discipline_config_settings_action" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'vlu_discipline', 'bin_size': False}</field>
+        </record>
+
+        <record id="vlu_discipline_tags_action" model="ir.actions.act_window">
+            <field name="name">Tags</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tags</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--        <record id="vlu_discipline_study_plan_action" model="ir.actions.act_window">-->
+        <!--            <field name="name">Study Plan</field>-->
+        <!--            <field name="type">ir.actions.act_window</field>-->
+        <!--            <field name="res_model">discipline.study.plan</field>-->
+        <!--            <field name="view_mode">tree,form</field>-->
+        <!--            <field name="target">current</field>-->
+        <!--            <field name="domain">[]</field>-->
+        <!--            <field name="context">{}</field>-->
+        <!--        </record>-->
+
+    </data>
+</odoo>

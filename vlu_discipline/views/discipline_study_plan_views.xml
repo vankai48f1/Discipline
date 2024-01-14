@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="vlu_discipline_discipline_study_plan_view_tree" model="ir.ui.view">
+            <field name="name">vlu.discipline.discipline.study.plan.view.tree</field>
+            <field name="model">discipline.study.plan</field>
+            <field name="arch" type="xml">
+                <tree string="Study Plan">
+                    <field name="module"/>
+                    <field name="number_of_credit"/>
+                    <field name="discipline_line_id"/>
+                    <field name="semester"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vlu_discipline_discipline_study_plan_view_tree" model="ir.ui.view">
+            <field name="name">vlu.discipline.discipline.study.plan.view.tree</field>
+            <field name="model">discipline.study.plan</field>
+            <field name="arch" type="xml">
+                <form string="Study Plan">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="discipline_line_id"/>
+                                <field name="semester"/>
+                            </group>
+                            <group>
+                                <field name="module"/>
+                                <field name="number_of_credit"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_classes_view_tree" model="ir.ui.view">
+            <field name="name">vlu.discipline.classes.view.tree</field>
+            <field name="model">classes</field>
+            <field name="arch" type="xml">
+                <tree string="Classes">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="majors_id"/>
+                    <field name="teacher_id" widget="many2one_avatar_user"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vlu_discipline_classes_view_form" model="ir.ui.view">
+            <field name="name">vlu.discipline.classes.view.form</field>
+            <field name="model">classes</field>
+            <field name="arch" type="xml">
+                <form string="Classes">
+                    <sheet>
+                        <group>
+                            <group string="Information">
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group string="Related">
+                                <field name="majors_id"/>
+                                <field name="teacher_id" widget="many2one_avatar_user"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

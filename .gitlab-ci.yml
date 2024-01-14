@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+build-job:
+  stage: deploy
+  tags:
+    - build
+  only:
+    - main
+  before_script:
+    - sudo -S systemctl stop odoo15
+  script:
+    - cd /home/odoo15/vlu
+    - git pull origin main
+  after_script:
+    - sudo -S systemctl start odoo15

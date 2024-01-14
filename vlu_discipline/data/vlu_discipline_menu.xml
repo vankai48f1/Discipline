@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+                id="vlu_discipline_menu_root"
+                name="Discipline"
+                sequence="1"
+                web_icon="vlu_discipline,static/description/icon.png"/>
+
+        <menuitem
+                id="vlu_discipline_menu_discipline_category"
+                name="Discipline"
+                groups=""
+                parent="vlu_discipline_menu_root"
+                sequence="1"/>
+
+        <menuitem
+                id="vlu_discipline_menu_configuration_category"
+                name="Configuration"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline_menu_root"
+                sequence="2"/>
+
+
+        <menuitem
+                id="vlu_discipline_majors_menu"
+                name="Major"
+                action="vlu_discipline.vlu_discipline_majors_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline.vlu_discipline_menu_configuration_category"
+                sequence="1"/>
+
+
+        <menuitem
+                id="vlu_disclipline_classes_menu"
+                name="Class"
+                action="vlu_discipline_classes_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline.vlu_discipline_menu_configuration_category"
+                sequence="2"/>
+        <menuitem
+                id="vlu_disclipline_discipline_type_menu"
+                name="Discipline Types"
+                action="vlu_discipline.vlu_discipline_discipline_type_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline.vlu_discipline_menu_configuration_category"
+                sequence="3"/>
+        <menuitem
+                id="vlu_discipline_semester_menu"
+                name="Semester"
+                action="vlu_discipline.vlu_discipline_semester_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline.vlu_discipline_menu_configuration_category"
+                sequence="4"/>
+        <menuitem
+                id="vlu_discipline_tags_menu"
+                name="Tags"
+                action="vlu_discipline_tags_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline.vlu_discipline_menu_configuration_category"
+                sequence="5"/>
+        <menuitem
+                id="vlu_discipline_discipline_menu"
+                name="Discipline"
+                action="vlu_discipline.vlu_discipline_discipline_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff,vlu_discipline.group_vlu_teacher,vlu_discipline.group_vlu_student"
+                parent="vlu_discipline.vlu_discipline_menu_discipline_category"
+                sequence="1"/>
+        <menuitem
+                id="vlu_discipline_discipline_line_menu_staff"
+                name="Discipline Lines"
+                action="vlu_discipline.vlu_discipline_discipline_line_action_staff"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"
+                parent="vlu_discipline.vlu_discipline_menu_discipline_category"
+                sequence="2"/>
+        <menuitem
+                id="vlu_discipline_discipline_line_menu_student"
+                name="My Discipline Lines"
+                action="vlu_discipline.vlu_discipline_discipline_line_action_student"
+                groups="vlu_discipline.group_vlu_student"
+                parent="vlu_discipline.vlu_discipline_menu_discipline_category"
+                sequence="3"/>
+        <menuitem
+                id="vlu_discipline_discipline_line_menu_teacher"
+                name="Classes Discipline Lines"
+                action="vlu_discipline.vlu_discipline_discipline_line_action_teacher"
+                groups="vlu_discipline.group_vlu_teacher"
+                parent="vlu_discipline.vlu_discipline_menu_discipline_category"
+                sequence="4"/>
+        <menuitem
+                id="vlu_discipline_config_settings_menu"
+                name="Settings"
+                parent="vlu_discipline.vlu_discipline_menu_configuration_category"
+                sequence="5"
+                action="vlu_discipline.vlu_discipline_config_settings_action"
+                groups="base.group_system,vlu_discipline.group_vlu_staff"/>
+
+        <!--        <menuitem-->
+        <!--                id="vlu_discipline_study_plan_menu"-->
+        <!--                name="Study Plan"-->
+        <!--                parent="vlu_discipline.vlu_discipline_menu_configuration_category"-->
+        <!--                sequence="6"-->
+        <!--                action="vlu_discipline.vlu_discipline_study_plan_action"-->
+        <!--                groups=""/>-->
+    </data>
+</odoo>

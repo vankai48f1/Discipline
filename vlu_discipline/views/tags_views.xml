@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_tags_view_tree" model="ir.ui.view">
+            <field name="name">vlu.tags.view.tree</field>
+            <field name="model">tags</field>
+            <field name="arch" type="xml">
+                <tree string="Tags">
+                    <field name="types"/>
+                    <field name="color" widget="color_picker"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vlu__discipline_tags_view_form" model="ir.ui.view">
+            <field name="name">vlu.tags.view.form</field>
+            <field name="model">tags</field>
+            <field name="arch" type="xml">
+                <form string="Tags">
+                    <sheet>
+                        <group>
+                            <group string="Types name">
+                                <field name="types"/>
+                            </group>
+                            <group string="Customize">
+                                <field name="color" widget="color_picker"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

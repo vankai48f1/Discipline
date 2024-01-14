@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="vlu_discipline_student_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                         t-att-data-oe-lang="o and o.env.context.get('lang')">
+                        <div class=".container"
+                             t-attf-style="font-family: 'Times New Roman', Serif;">
+                            <div t-attf-style="text-align:center;">
+                                <h4 t-attf-style="font-weight:bold">
+                                    CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+                                </h4>
+                                <h5>Độc lập - Tự do - Hạnh phúc</h5>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div t-attf-style="text-align:center;">
+                                <h2 t-attf-style="font-weight:bold">ĐƠN CAM KẾT HỌC TẬP</h2>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row" t-attf-style="font-size: 25px">
+                                <div class="col-3" t-attf-style="text-align:right">
+                                    <strong>Kính Gửi:</strong>
+                                </div>
+                                <div class="col-9" t-attf-style="text-align:left">
+                                    <p>- Ban Giám Hiệu;</p>
+                                    <p>- Phòng Đào Tạo;</p>
+                                    <p>- Ban Chủ Nhiệm Khoa.</p>
+                                </div>
+                            </div>
+                            <br/>
+                            <div t-attf-style="text-align:justify; font-size:25px">
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p class="mr-3">
+                                        Em tên là:
+                                        <strong>
+                                            <span t-if="o.student_id.partner_id.name"
+                                                  t-esc="o.student_id.partner_id.name"/>
+                                        </strong>
+                                    </p>
+                                    <p class="mr-3">
+                                        Sinh ngày:
+                                        <strong>
+                                            12/08/1995
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p class="mr-3">
+                                        Lớp:
+                                        <strong>
+                                            <span t-esc="o.classes_id.name or ''"/>
+                                        </strong>
+                                    </p>
+                                    <p class="mr-3">
+                                        MSSV:
+                                        <strong>
+                                            <span t-esc="o.student_code or ''"/>
+                                        </strong>
+                                    </p>
+                                    <p class="mr-3">
+                                        Ngành:
+                                        <strong>
+                                            <span t-esc="o.majors_id.name or ''"/>
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p class="mr-3">
+                                        Số điện thoại:
+                                        <strong>
+                                            <span t-esc="o.student_id.partner_id.phone or ''"/>
+                                        </strong>
+                                    </p>
+                                    <p class="ml-6">
+                                        Email:
+                                        <strong>
+                                            <span t-esc="o.student_id.partner_id.email or ''"/>
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p>Theo kết quả xử lý học tập
+                                        <span t-esc="o.semester_id.name or ''"/>
+                                        của Trường em
+                                        thuộc diện
+                                        <strong>
+                                            <span t-esc="o.discipline_type_id.name"/>.
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p>Lý do em rơi vào tình trạng này:<span t-esc="o.excuse or ''"/>.
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p>Em xin được tiếp tục học cùng lớp:
+                                        <strong>
+                                            <span t-esc="o.classes_id.name or ''"/>
+                                            (
+                                            <span t-esc="o.semester_id.name or ''"/>
+                                            -
+                                            <span t-esc="o.semester_id.year or ''"/>).
+                                        </strong>
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p>Em cam đoan sẽ thực hiện được kế hoạch trả nợ của mình để năm sau em không thuộc
+                                        diện xử lý và sẽ không viết đơn thêm lần nữa.
+                                    </p>
+                                </div>
+                                <div class="row" t-attf-style="text-align:justify">
+                                    <p>Kính mong Ban Giám Hiệu và Ban Chủ Nhiệm Khoa xem xét cho em thêm một cơ hội được
+                                        học tập. Em xin chân thành cảm ơn.
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6" t-attf-style="text-align:left">
+                                        <p>
+                                            <strong>Ý kiến của gia đình:</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-6" t-attf-style="text-align:center">
+                                        <p class="lh-sm">TPHCM, ngày
+                                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/>
+                                            tháng
+                                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m')"/>
+                                            năm
+                                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
+                                            <br/>
+                                            <strong>Kính đơn</strong>
+                                            <br/>
+                                            <!--Signature-->
+                                            <span t-if="o.student_id.sign_initials" t-esc="o.student_id.sign_initials"
+                                                  t-options="{'widget':'image'}"/>
+                                            <br/>
+                                            <strong>
+                                                <span t-esc="o.student_id.partner_id.name or ''"/>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div class="col-6" t-attf-style="text-align:left;">
+                                        <p>
+                                            <strong>Ý kiến của Khoa</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-6" t-attf-style="text-align:center">
+                                        <p class="lh-sm">
+                                            <strong>Ý kiến của GVCN</strong>
+                                            <br/>
+                                            <span t-esc="o.comment or ''"/>
+                                            <br/>
+                                            <!--Signature-->
+                                            <span t-if="o.teacher_id.sign_initials"
+                                                  t-esc="o.teacher_id.sign_initials"
+                                                  t-options="{'widget':'image'}"/>
+                                            <br/>
+                                            <strong>
+                                                <span t-esc="o.teacher_id.partner_id.name"/>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                         t-att-data-oe-lang="o and o.env.context.get('lang')">
+                        <div class=".container lh-sm" t-attf-style="font-family: 'Times New Roman', Serif;">
+                            <div t-attf-style="text-align:center;">
+                                <h3 t-attf-style="font-weight:bold">
+                                    KẾ HOẠCH HỌC TẬP, TRẢ NỢ HỌC PHẦN
+                                </h3>
+                            </div>
+                            <div t-attf-style="text-align:center;font-size:25px">
+                                <p>
+                                    Họ và tên Sinh viên:
+                                    <strong>
+                                        <span class="mr-3" t-esc="o.student_id.partner_id.name"/>
+                                    </strong>
+                                    Lớp:
+                                    <strong>
+                                        <span t-esc="o.classes_id.name or ''"/>
+                                    </strong>
+                                </p>
+                            </div>
+                            <br/>
+                            <table class="table table-bordered" t-attf-style="font-size:25px">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            TT
+                                        </th>
+                                        <th scope="col">
+                                            HỌC PHẦN
+                                        </th>
+                                        <th scope="col">
+                                            SỐ TC
+                                        </th>
+                                        <th scope="col">
+                                            HỌC KỲ
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="count" t-value="0"/>
+                                    <t t-if="o.study_plan_ids" t-foreach="o.study_plan_ids" t-as="subject">
+                                        <t t-set="count" t-value="count + 1"/>
+                                        <tr>
+                                            <th scope="row">
+                                                <t t-esc="count"/>
+                                            </th>
+                                            <th scope="row">
+                                                <t t-esc="subject.module"/>
+                                            </th>
+                                            <th scope="row">
+                                                <t t-esc="subject.number_of_credit"/>
+                                            </th>
+                                            <th scope="row"><t t-esc="subject.semester.name"/>-
+                                                <t t-esc="subject.semester.year"/>
+                                            </th>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <div class="row">
+                                <div class="col-6" t-attf-style="text-align:center; font-size:25px">
+                                    <strong>
+                                        <p>CVHT/GVCN xác nhận<br/>Ký tên
+                                            <br/>
+                                            <span t-if="o.teacher_id.sign_initials"
+                                                  t-esc="o.teacher_id.sign_initials"
+                                                  t-options="{'widget':'image'}"/>
+                                            <br/>
+                                            <span t-esc="o.teacher_id.partner_id.name or ''"/>
+                                        </p>
+                                    </strong>
+                                </div>
+                                <div class="col-6 lh-sm" t-attf-style="text-align:center; font-size:25px">
+                                    <strong>
+                                        <p>Sinh viên xác nhận<br/>Ký tên
+                                            <br/>
+                                            <span t-if="o.student_id.sign_initials"
+                                                  t-esc="o.student_id.sign_initials"
+                                                  t-options="{'widget':'image'}"/>
+                                            <br/>
+                                            <span t-esc="o.student_id.partner_id.name or ''"/>
+                                        </p>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

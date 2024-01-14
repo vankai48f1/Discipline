@@ -1,0 +1,1685 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vlu_discipline
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 12:05+0000\n"
+"PO-Revision-Date: 2023-08-11 12:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vlu_discipline
+#: model:ir.actions.report,print_report_name:vlu_discipline.vlu_discipline_student_report_action
+msgid ""
+"((object.student_code) + '_' + (object.student_id.name)).replace(' ',\n"
+"                '_').lower()\n"
+"            "
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "- Ban Chủ Nhiệm Khoa."
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "- Ban Giám Hiệu;"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "- Phòng Đào Tạo;"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"<br/>\n"
+"                                            <strong>Kính đơn</strong>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_res_config_settings_inherit_view_form
+msgid "<span class=\"o_form_label\">Email</span>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "<strong>Kính Gửi:</strong>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"<strong>Ý kiến của GVCN</strong>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "<strong>Ý kiến của Khoa</strong>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "<strong>Ý kiến của gia đình:</strong>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:mail.template,body_html:vlu_discipline.mail_template_student_new
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                                <!-- HEADER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\">\n"
+"                                                    <!--                                                        <span style=\"font-size: 10px;\">Your Discipline</span>-->\n"
+"                                                    <!--                                                        <br/>-->\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                    </span>\n"
+"                                                </td>\n"
+"                                                <td valign=\"middle\" align=\"right\">\n"
+"                                                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- CONTENT -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear <t t-out=\"object.name or ''\"/>,\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                        Your has been discipline!\n"
+"                                                        <br/>\n"
+"                                                        Your login is\n"
+"                                                        <strong>\n"
+"                                                            <t t-out=\"object.email or ''\"/>\n"
+"                                                        </strong>\n"
+"                                                        <br/>\n"
+"                                                        You can access the form using the link below:\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <a t-att-href=\"ctx.get('url')\" target=\"_blank\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                                                Go to\n"
+"                                                            </a>\n"
+"                                                        </div>\n"
+"                                                        Thanks,\n"
+"                                                        <br/>\n"
+"                                                        <t t-if=\"object.signature\">\n"
+"                                                            <br/>\n"
+"                                                            <t t-out=\"object.signature or ''\">--\n"
+"                                                                <br/>\n"
+"                                                            </t>\n"
+"                                                        </t>\n"
+"                                                    </div>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- FOOTER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\">\n"
+"                                                    <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                                    <t t-out=\"object.company_id.phone or ''\"/>\n"
+"                                                    <t t-if=\"object.company_id.email\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'mailto:%s' % {{ object.company_id.email }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.email or ''\">\n"
+"\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                    <t t-if=\"object.company_id.website\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.website or ''\">\n"
+"                                                                https://vlu.edu.vn\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </tbody>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                                <td style=\"text-align: center; font-size: 13px;\">\n"
+"                                    Powered by\n"
+"                                    <a target=\"_blank\" href=\"https://vlu.edu.vn/\" style=\"color: #875A7B;\">Văn Lang University\n"
+"                                    </a>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        "
+msgstr ""
+
+#. module: vlu_discipline
+#: model:mail.template,body_html:vlu_discipline.mail_template_process
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                                <!-- HEADER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                    </span>\n"
+"                                                </td>\n"
+"                                                <td valign=\"middle\" align=\"right\">\n"
+"                                                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- CONTENT -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear <t t-out=\"object.name or ''\"/>,\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                        Form confirmed\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                        You can access the form using the link below:\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <a t-att-href=\"ctx.get('url')\" target=\"_blank\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                                                Go to\n"
+"                                                            </a>\n"
+"                                                        </div>\n"
+"                                                        Thanks,\n"
+"                                                        <br/>\n"
+"                                                        <t t-if=\"object.signature\">\n"
+"                                                            <br/>\n"
+"                                                            <t t-out=\"object.signature or ''\">--\n"
+"                                                                <br/>\n"
+"                                                            </t>\n"
+"                                                        </t>\n"
+"                                                    </div>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- FOOTER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\">\n"
+"                                                    <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                                    <t t-out=\"object.company_id.phone or ''\"/>\n"
+"                                                    <t t-if=\"object.company_id.email\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'mailto:%s' % {{ object.company_id.email }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.email or ''\">\n"
+"\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                    <t t-if=\"object.company_id.website\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.website or ''\">\n"
+"                                                                https://vlu.edu.vn\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </tbody>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                                <td style=\"text-align: center; font-size: 13px;\">\n"
+"                                    Powered by\n"
+"                                    <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Văn Lang University\n"
+"                                    </a>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        "
+msgstr ""
+
+#. module: vlu_discipline
+#: model:mail.template,body_html:vlu_discipline.mail_template_teacher_new
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                                <!-- HEADER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                    </span>\n"
+"                                                </td>\n"
+"                                                <td valign=\"middle\" align=\"right\">\n"
+"                                                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- CONTENT -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear <t t-out=\"object.name or ''\"/>,\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                        Your student has been disciplined!\n"
+"                                                        <br/>\n"
+"                                                        Your login is\n"
+"                                                        <strong>\n"
+"                                                            <t t-out=\"object.email or ''\"/>\n"
+"                                                        </strong>\n"
+"                                                        <br/>\n"
+"                                                        You can access the form using the link below:\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <a t-att-href=\"ctx.get('url')\" target=\"_blank\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                                                Go to\n"
+"                                                            </a>\n"
+"                                                        </div>\n"
+"                                                        Thanks,\n"
+"                                                        <br/>\n"
+"                                                        <t t-if=\"object.signature\">\n"
+"                                                            <br/>\n"
+"                                                            <t t-out=\"object.signature or ''\">--\n"
+"                                                                <br/>\n"
+"                                                            </t>\n"
+"                                                        </t>\n"
+"                                                    </div>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- FOOTER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\">\n"
+"                                                    <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                                    <t t-out=\"object.company_id.phone or ''\"/>\n"
+"                                                    <t t-if=\"object.company_id.email\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'mailto:%s' % {{ object.company_id.email }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.email or ''\">\n"
+"\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                    <t t-if=\"object.company_id.website\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.website or ''\">\n"
+"                                                                https://vlu.edu.vn\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </tbody>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                                <td style=\"text-align: center; font-size: 13px;\">\n"
+"                                    Powered by\n"
+"                                    <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Văn Lang University\n"
+"                                    </a>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        "
+msgstr ""
+
+#. module: vlu_discipline
+#: model:mail.template,body_html:vlu_discipline.mail_template_validate
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                            <tbody>\n"
+"                                <!-- HEADER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\">\n"
+"                                                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                                                        <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                    </span>\n"
+"                                                </td>\n"
+"                                                <td valign=\"middle\" align=\"right\">\n"
+"                                                    <img t-attf-src=\"/logo.png?company={{ object.company_id.id }}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-alt=\"object.company_id.name\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- CONTENT -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                                    <div>\n"
+"                                                        Dear<t t-out=\"object.name or ''\"/>,\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                        Form validated!\n"
+"                                                        <br/>\n"
+"                                                        <br/>\n"
+"                                                        You can access the form using the link below:\n"
+"                                                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                            <a t-att-href=\"ctx.get('url')\" target=\"_blank\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                                                Go to\n"
+"                                                            </a>\n"
+"                                                        </div>\n"
+"                                                        Thanks,\n"
+"                                                        <br/>\n"
+"                                                        <t t-if=\"object.signature\">\n"
+"                                                            <br/>\n"
+"                                                            <t t-out=\"object.signature or ''\">--\n"
+"                                                                <br/>\n"
+"                                                            </t>\n"
+"                                                        </t>\n"
+"                                                    </div>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td style=\"text-align:center;\">\n"
+"                                                    <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                                <!-- FOOTER -->\n"
+"                                <tr>\n"
+"                                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\">\n"
+"                                                    <t t-out=\"object.company_id.name or ''\"/>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                            <tr>\n"
+"                                                <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                                                    <t t-out=\"object.company_id.phone or ''\"/>\n"
+"                                                    <t t-if=\"object.company_id.email\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'mailto:%s' % {{ object.company_id.email }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.email or ''\">\n"
+"\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                    <t t-if=\"object.company_id.website\">\n"
+"                                                        |\n"
+"                                                        <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                                            <t t-out=\"object.company_id.website or ''\">\n"
+"                                                                https://vlu.edu.vn\n"
+"                                                            </t>\n"
+"                                                        </a>\n"
+"                                                    </t>\n"
+"                                                </td>\n"
+"                                            </tr>\n"
+"                                        </table>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </tbody>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                            <tr>\n"
+"                                <td style=\"text-align: center; font-size: 13px;\">\n"
+"                                    Powered by\n"
+"                                    <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Văn Lang University\n"
+"                                    </a>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        "
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "APPROVE"
+msgstr "Cho phép"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_needaction
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_needaction
+msgid "Action Needed"
+msgstr "Hành động cần thiết"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__active
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__active
+msgid "Activate"
+msgstr "Hoạt động"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_exception_decoration
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hoạt động trang trí ngoại lệ"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_state
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_type_icon
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng kiểu hoạt động"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Are you sure?"
+msgstr "Bạn có chắc?"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_attachment_count
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng tệp đính kèm"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "Be careful because the business life cycle. You still want to approve?"
+msgstr "Hãy cẩn thận bởi vì điều này ảnh hưởng đến vòng đời nghiệp vụ. Bạn vẫn muốn thực hiện?"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid ""
+"Be careful because the business life cycle. You still want to disapprove?"
+msgstr "Hãy cẩn thận bởi vì điều này ảnh hưởng đến vòng đời nghiệp vụ. Bạn vẫn muốn thực hiện?"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "Bạn chưa tải tệp dữ liệu, vui lòng kiểm tra lại."
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline__state__cancel
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline_line__state__cancel
+msgid "CANCEL"
+msgstr "Hủy bỏ"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "CONFIRM"
+msgstr "Xác nhận"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"CVHT/GVCN xác nhận<br/>Ký tên\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: vlu_discipline
+#: model:ir.ui.menu,name:vlu_discipline.vlu_disclipline_classes_menu
+msgid "Class"
+msgstr "Lớp học"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_classes_action
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__classes_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__classes_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_partner__classes_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_users__classes_id
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_classes_view_form
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_classes_view_tree
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_majors_view_form
+msgid "Classes"
+msgstr "Lớp học"
+
+#. module: vlu_discipline
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_discipline_line_menu_teacher
+msgid "Classes Discipline Lines"
+msgstr "Dòng xử lý lớp học của tôi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__code
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__code
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__code
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_partner__vlu_code
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_users__vlu_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__color
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__comment
+msgid "Comment"
+msgstr "Nhận xét"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_config_settings__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_res_config_settings
+msgid "Config Settings"
+msgstr "Thiết lập cấu hình"
+
+#. module: vlu_discipline
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_menu_configuration_category
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Create Lines"
+msgstr "Tạo dòng"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Create by"
+msgstr "Được tạo bởi"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Create on"
+msgstr "Được tạo vào"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__create_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__create_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu__discipline_tags_view_form
+msgid "Customize"
+msgstr "Điều chỉnh"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "DISAPPROVE"
+msgstr "Không cho phép"
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline__state__done
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline_line__state__done
+msgid "DONE"
+msgstr "Hoàn thành"
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline__state__draft
+msgid "DRAFT"
+msgstr "Bản nháp"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_res_users_inherit_view_form_simple_modif
+msgid "Digital Signatures"
+msgstr "Chữ ký số"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_users__sign_initials
+msgid "Digitial Initials"
+msgstr "Chữ ký"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_discipline_action
+#: model:ir.model,name:vlu_discipline.model_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__discipline_id
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_discipline_menu
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_menu_discipline_category
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_menu_root
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_search
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_tree
+msgid "Discipline"
+msgstr "Xử lý"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_discipline_line_action_staff
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__line_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__study_plan_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__discipline_line_id
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_discipline_line_menu_staff
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_tree
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Discipline Lines"
+msgstr "Dòng xử lý"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_discipline_line_action_teacher
+msgid "Discipline Lines Classes"
+msgstr "Dòng xử lý của lớp học"
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_discipline_study_plan
+msgid "Discipline Study Plan"
+msgstr "Kế hoạch trả nợ"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_discipline_type_action
+#: model:ir.model,name:vlu_discipline.model_discipline_type
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_type_view_tree
+msgid "Discipline Type"
+msgstr "Hình thức kỷ luật"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__discipline_type_id
+#: model:ir.ui.menu,name:vlu_discipline.vlu_disclipline_discipline_type_menu
+msgid "Discipline Types"
+msgstr "Hình thức kỷ luật"
+
+#. module: vlu_discipline
+#: model:mail.template,name:vlu_discipline.mail_template_process
+msgid "Discipline: Notification to teacher when your student confirm"
+msgstr "Xử lý: Thông báo đến giảng viên khi sinh viên xác nhận biểu mẫu"
+
+#. module: vlu_discipline
+#: model:mail.template,name:vlu_discipline.mail_template_student_new
+msgid "Discipline: Notification when you disciplined"
+msgstr "Xử lý: Thông báo đến sinh viên khi có xử lý học vụ"
+
+#. module: vlu_discipline
+#: model:mail.template,name:vlu_discipline.mail_template_teacher_new
+#: model:mail.template,name:vlu_discipline.mail_template_validate
+msgid "Discipline: Notification when your student disciplined"
+msgstr "Xử lý: Thông báo đến giảng viên khi sinh viên thuộc quản lý của mình có xử lý vi phạm."
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__display_name
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_res_config_settings_inherit_view_form
+msgid "Documentation"
+msgstr "Tài liệu hóa"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Download Template"
+msgstr "Tải biểu mẫu"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "Dòng %s cột %s hiện tại không có giá trị"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"Em cam đoan sẽ thực hiện được kế hoạch trả nợ của mình để năm sau em không thuộc\n"
+"                                        diện xử lý và sẽ không viết đơn thêm lần nữa."
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Em tên là:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Em xin được tiếp tục học cùng lớp:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_config_settings__email
+msgid "Email Văn Lang"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_res_config_settings_inherit_view_form
+msgid "Email list for warnings"
+msgstr "Danh sách email gửi thông báo"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Email:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "Enter the reason why you are in this situation."
+msgstr "Vui lòng nhập lý do tại sao bạn rơi vào tình trạng này."
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__is_excuse
+msgid "Excuse"
+msgstr "Thực hiện"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__file_import
+msgid "File Import Lines"
+msgstr "Tệp"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__file_import_name
+msgid "File Import Name"
+msgstr "Tên tệp"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__file_name
+msgid "File Name"
+msgstr "Tên tệp"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_follower_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_partner_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (đối tác)"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__activity_type_icon
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "General information"
+msgstr "Thông tin chung"
+
+#. module: vlu_discipline
+#: model:ir.module.category,name:vlu_discipline.module_vlu_discipline_category
+msgid "Group VLU Discipline"
+msgstr "Đại học Văn Lang"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_search
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_search
+msgid "Group by"
+msgstr "Nhóm bởi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__has_message
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__has_message
+msgid "Has Message"
+msgstr "Có tin nhắn"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "Hình thức kỷ luật chưa được cấu hình vui lòng kiểm tra lại dữ liệu"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "HỌC KỲ"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "HỌC PHẦN"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Họ và tên Sinh viên:"
+msgstr ""
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "Học sinh chưa được cấu hình vui lòng kiểm tra lại dữ liệu"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__id
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__id
+msgid "ID"
+msgstr "Mã ID"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_exception_icon
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__activity_exception_icon
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một loại hoạt động ngoại lệ"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_needaction
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_unread
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_needaction
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Nếu được chọn, các tin nhắn mới cần bạn chú ý."
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_has_error
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_has_sms_error
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_has_error
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu được chọn, một số thư có lỗi gửi."
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_classes_view_form
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "Information Related"
+msgstr "Thông tin liên quan"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__is_exist_line
+msgid "Is Exist Line"
+msgstr "Dòng tồn tại"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_is_follower
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__is_read_comment
+msgid "Is Read Comment"
+msgstr "Là người đọc nhận xét"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__is_read_excuse
+msgid "Is Read Excuse"
+msgstr "Là người đọc lý do"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"Kính mong Ban Giám Hiệu và Ban Chủ Nhiệm Khoa xem xét cho em thêm một cơ hội được\n"
+"                                        học tập. Em xin chân thành cảm ơn."
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "KẾ HOẠCH HỌC TẬP, TRẢ NỢ HỌC PHẦN"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester____last_update
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__write_uid
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__write_uid
+msgid "Last Updated by"
+msgstr "Được cập nhật bởi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__write_date
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__write_date
+msgid "Last Updated on"
+msgstr "Được cập nhật lần cuối vào"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Lock"
+msgstr "Khóa"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Lý do em rơi vào tình trạng này:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Lớp:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"Lớp:\n"
+"                                    <strong>KTPM01</strong>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "MSSV:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_main_attachment_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Tệp chính"
+
+#. module: vlu_discipline
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_majors_menu
+msgid "Major"
+msgstr "Ngành học"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_majors_action
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__majors_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__majors_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_partner__majors_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_res_users__majors_id
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_majors_view_tree
+msgid "Majors"
+msgstr "Ngành học"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_has_error
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_has_error
+msgid "Message Delivery error"
+msgstr "Tin nhắn lỗi khi gởi đi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__module
+msgid "Module"
+msgstr "Mô-đun"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__my_activity_date_deadline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Thời hạn hoạt động của tôi"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_discipline_line_action_student
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_discipline_line_menu_student
+msgid "My Discipline Lines"
+msgstr "Dòng vi phạm của tôi"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "Mỗi sinh viên trong danh sách phải là duy nhất"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline_line__state__draft
+msgid "NEW"
+msgstr "Mới"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__name
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__name
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__name
+#: model:ir.model.fields,field_description:vlu_discipline.field_majors__name
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_type__need_commitment
+msgid "Need Commitment?"
+msgstr "Cần cam kết?"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#: code:addons/vlu_discipline/models/discipline.py:0
+#: code:addons/vlu_discipline/models/discipline.py:0
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_date_deadline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Thời hạn hoạt động tiếp theo"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_summary
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_type_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "Loại hoạt động tiếp theo"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Ngành:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:mail.template,subject:vlu_discipline.mail_template_validate
+msgid "Notification: Your Teacher Validated"
+msgstr "Thông báo: Giảng viên của bạn đã đánh giá và nhận xét."
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_needaction_counter
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số hành động"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__number_of_credit
+msgid "Number of Credits"
+msgstr "Tín chỉ"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_has_error_counter
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lỗi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_needaction_counter
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số lượng tin nhắn yêu cầu một hành động"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_has_error_counter
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số lượng thư có lỗi gửi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__message_unread_counter
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số lượng tin nhắn chưa đọc"
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline__state__processing
+msgid "PROCESSING"
+msgstr "Quá trình"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline_line.py:0
+#, python-format
+msgid "Please give some comments about this student."
+msgstr "Hãy cho vài lới nhận xét về sinh viên này."
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline_line.py:0
+#, python-format
+msgid "Please, input your plans study or raise some reasons!"
+msgstr "Hãy nhập kế hoạch trả nợ học phần hoặc nêu lý do bạn rơi vào tình trạng này."
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "Print Report"
+msgstr "In cam kết"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_classes_view_form
+msgid "Related"
+msgstr "Liên quan"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__report_file
+msgid "Report File(PDF)"
+msgstr "Tệp cam kết (PDF)"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__activity_user_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__activity_user_id
+msgid "Responsible User"
+msgstr "Trách nhiệm người dùng"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_has_sms_error
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS gửi bị lỗi"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__year
+#: model:ir.model.fields,field_description:vlu_discipline.field_semester__year
+msgid "School Year"
+msgstr "Năm học"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_semester_action
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__semester_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__semester_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_study_plan__semester
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_semester_menu
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_search
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_search
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_disipline_semester_view_tree
+msgid "Semester"
+msgstr "Học kỳ"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+msgid "Set draft"
+msgstr "Nháp"
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_config_settings_action
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_config_settings_menu
+msgid "Settings"
+msgstr "Cài đặt"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"Sinh ngày:\n"
+"                                        <strong>\n"
+"                                            12/08/1995\n"
+"                                        </strong>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"Sinh viên xác nhận<br/>Ký tên\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__state
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__parent_state
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__activity_state
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__student_id
+msgid "Student"
+msgstr "Sinh viên"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__student_code
+msgid "Student Code"
+msgstr "Mã sinh viên"
+
+#. module: vlu_discipline
+#: model:ir.actions.report,name:vlu_discipline.vlu_discipline_student_report_action
+msgid "Student Discipline"
+msgstr "Sinh viên xử lý"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_search
+msgid "Student Name"
+msgstr "Tên sinh viên"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "Study Plan"
+msgstr "Kế hoạch trả nợ"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "SỐ TC"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Số điện thoại:"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline_line__state__to_commit
+msgid "TO COMMIT"
+msgstr "Cam kết"
+
+#. module: vlu_discipline
+#: model:ir.model.fields.selection,name:vlu_discipline.selection__discipline_line__state__to_validate
+msgid "TO VALIDATE"
+msgstr "Đánh giá"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "TPHCM, ngày"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "TT"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.actions.act_window,name:vlu_discipline.vlu_discipline_tags_action
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__tags_ids
+#: model:ir.ui.menu,name:vlu_discipline.vlu_discipline_tags_menu
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu__discipline_tags_view_form
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_form
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_tags_view_tree
+msgid "Tags"
+msgstr "Thẻ"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_classes__teacher_id
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__teacher_id
+msgid "Teacher"
+msgstr "Giảng viên"
+
+#. module: vlu_discipline
+#: model:ir.model.constraint,message:vlu_discipline.constraint_classes_classes_unique_code
+msgid "The classes code must be unique."
+msgstr "Mã lớp học phải là duy nhất"
+
+#. module: vlu_discipline
+#: model:ir.model.constraint,message:vlu_discipline.constraint_discipline_type_discipline_type_unique_code
+msgid "The code discipline type must be unique."
+msgstr "Mã hình thức xử lý phải là duy nhất"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline.py:0
+#, python-format
+msgid "The current processing list is empty, must contain at least one line."
+msgstr "Hiện tại danh sách sinh viên xử lý chưa có, danh sách phải chứa ít nhất một sinh viên."
+
+#. module: vlu_discipline
+#: model:ir.model.constraint,message:vlu_discipline.constraint_majors_majors_unique_code
+msgid "The majors code must be unique."
+msgstr "Mã ngành phải là duy nhất"
+
+#. module: vlu_discipline
+#: model:ir.model.constraint,message:vlu_discipline.constraint_res_partner_res_partner_unique_code
+msgid "The partner code must be unique."
+msgstr "Mã sinh viên phải là duy nhất"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Theo kết quả xử lý học tập"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__activity_exception_decoration
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trên hồ sơ."
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_tags__types
+msgid "Types"
+msgstr "Loại"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu__discipline_tags_view_form
+msgid "Types name"
+msgstr "Tên loại"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_unread
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_unread
+msgid "Unread Messages"
+msgstr "Tin nhắn chưa đọc"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__message_unread_counter
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Số tin nhắn chưa đọc"
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_line_view_form
+msgid "VALIDATE"
+msgstr "Đánh giá"
+
+#. module: vlu_discipline
+#: model:res.groups,name:vlu_discipline.group_vlu_staff
+msgid "VLU Staff"
+msgstr "Nhân viên Văn Lang"
+
+#. module: vlu_discipline
+#: model:res.groups,name:vlu_discipline.group_vlu_student
+msgid "VLU Student"
+msgstr "Sinh viên Văn Lang"
+
+#. module: vlu_discipline
+#: model:res.groups,name:vlu_discipline.group_vlu_teacher
+msgid "VLU Teacher"
+msgstr "Giảng viên Văn Lang"
+
+#. module: vlu_discipline
+#: code:addons/vlu_discipline/models/discipline_study_plan.py:0
+#, python-format
+msgid "Values should not be zero."
+msgstr "Giá trị không thể nhỏ hơn hoặc bằng 0."
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_res_config_settings_inherit_view_form
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_res_partner_inherit_view_form
+msgid "Văn Lang University"
+msgstr "Đại học Văn Lang"
+
+#. module: vlu_discipline
+#: model:mail.template,subject:vlu_discipline.mail_template_student_new
+#: model:mail.template,subject:vlu_discipline.mail_template_teacher_new
+msgid "Warning: You have discipline"
+msgstr "Cảnh báo: Bạn có xử lý học vụ"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline__website_message_ids
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__website_message_ids
+msgid "Website Messages"
+msgstr "Tin nhắn Website"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,help:vlu_discipline.field_discipline__website_message_ids
+#: model:ir.model.fields,help:vlu_discipline.field_discipline_line__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử giao tiếp website"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_discipline_view_search
+msgid "Year"
+msgstr "Năm"
+
+#. module: vlu_discipline
+#: model:ir.model.fields,field_description:vlu_discipline.field_discipline_line__excuse
+msgid "Your Excuse"
+msgstr "Lý do"
+
+#. module: vlu_discipline
+#: model:mail.template,subject:vlu_discipline.mail_template_process
+msgid "Your Student Confirmed"
+msgstr "Sinh viên của bạn xác nhận"
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_classes
+msgid "classes"
+msgstr "Lớp học"
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid ""
+"của Trường em\n"
+"                                        thuộc diện"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_discipline_line
+msgid "discipline.line"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_majors
+msgid "majors"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "năm"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_semester
+msgid "semester"
+msgstr ""
+
+#. module: vlu_discipline
+#: model:ir.model,name:vlu_discipline.model_tags
+msgid "tags"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "tháng"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "ĐƠN CAM KẾT HỌC TẬP"
+msgstr ""
+
+#. module: vlu_discipline
+#: model_terms:ir.ui.view,arch_db:vlu_discipline.vlu_discipline_student_report_template
+msgid "Độc lập - Tự do - Hạnh phúc"
+msgstr ""

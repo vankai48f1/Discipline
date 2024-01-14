@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vlu_discipline_res_config_settings_inherit_view_form" model="ir.ui.view">
+            <field name="name">vlu.discipline.res.config.settings.inherit.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="100"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Discipline" string="Văn Lang University" data-key="vlu_discipline" groups="base.group_system,vlu_discipline.group_vlu_staff">
+                        <h2>Văn Lang University</h2>
+                        <div class="row mt16 o_settings_container" name="invoicing_setting_container">
+                            <div class="col-12 col-lg-6 o_setting_box" id="down_payments">
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <span class="o_form_label">Email</span>
+                                    <a href="#" title="Documentation" class="o_doc_link" target="_blank"/>
+                                    <div class="text-muted">
+                                    Email list for warnings
+                                    </div>
+                                    <div class="text-muted">
+                                        <field name="email" widget="email"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
